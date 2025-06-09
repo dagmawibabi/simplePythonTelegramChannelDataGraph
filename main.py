@@ -84,7 +84,7 @@ def analysis():
     print("--------------------------------------------------------------")
     print("channelName: ", channelName)
     print("--------------------------------------------------------------")
-    print("yearsActive: ", len(msgCountByYear))
+    print("yearsActive: ", len(msgCountByYear) - 1)
     print("channelBirthdate: ", channelBirthdate)
     print("channelLastPost: ", channelLastPost)
     print("--------------------------------------------------------------")
@@ -333,7 +333,7 @@ def window():
     # Box 1: Year Active & Birthdate
     box1 = tk.Frame(container, bd=2, relief='groove', padx=10, pady=10)
     box1.grid(row=1, column=0, padx=10, pady=10, sticky='nsew')
-    tk.Label(box1, text=f"Years Active: {len(msgCountByYear)}", font=('Helvetica', 10)).pack(anchor='w')
+    tk.Label(box1, text=f"Years Active: {len(msgCountByYear) - 1}", font=('Helvetica', 10)).pack(anchor='w')
     tk.Label(box1, text=f"Channel Birthdate: {channelBirthdate}", font=('Helvetica', 10)).pack(anchor='w')
     tk.Label(box1, text=f"Last Post: {channelLastPost}", font=('Helvetica', 10)).pack(anchor='w')
 
